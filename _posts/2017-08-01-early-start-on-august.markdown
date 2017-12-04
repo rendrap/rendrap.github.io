@@ -3,7 +3,7 @@ layout: post
 title:  "Early August post, just for you"
 date:   2017-08-01 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-3.jpg
+thumb: Thumb-3.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quisquam alias Lorem ipsum dolor sit amet. pariatur sunt vero culpa.....
 hidden : true
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Post 4"
 date:   2017-07-05 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-1.jpg
+thumb: Thumb-1.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nesciunt ullam consequuntur fuga porro, nihil!
 ---
 this is post-r <br>

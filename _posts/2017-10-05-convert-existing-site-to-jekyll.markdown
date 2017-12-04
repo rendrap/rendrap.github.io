@@ -1,6 +1,6 @@
 ---
 layout: post
-thumb: thumb-4.jpg
+thumb: Thumb-4.jpg
 title: Convert an HTML site to Jekyll
 hidden : true
 description: yeayy Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll! It's finally out"
 date:   2017-09-22 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-1.jpg
+thumb: Thumb-1.jpg
 description: yeayy Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, facilis!
 hidden : true
 ---

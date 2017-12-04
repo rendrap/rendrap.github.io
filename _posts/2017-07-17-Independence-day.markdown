@@ -3,7 +3,7 @@ layout: post
 title:  "Indonesia independence day"
 date:   2017-07-17 07:23:45 +0700
 categories: independence
-thumb: thumb-3.jpg
+thumb: Thumb-3.jpg
 description: This page is about history of Indonesia independence day.
 ---
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

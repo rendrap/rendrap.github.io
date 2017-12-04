@@ -3,7 +3,7 @@ layout: post
 title:  "Previous post, new post every week!"
 date:   2017-08-12 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-2.jpg
+thumb: Thumb-2.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quisquam alias Lorem ipsum dolor sit amet. pariatur sunt vero culpa..
 hidden : true
 ---

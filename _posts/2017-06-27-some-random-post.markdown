@@ -3,7 +3,7 @@ layout: post
 title:  "Some random post"
 date:   2017-06-27 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-3.jpg
+thumb: Thumb-3.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, laudantium.
 ---
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
