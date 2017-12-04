@@ -4,7 +4,7 @@ title:  "Early August post"
 date:   2017-05-17 07:23:45 +0700
 comments: true
 categories: jekyll update
-thumb: thumb-3.jpg
+thumb: Thumb-3.jpg
 description: This additional page serve the purpose to better explain the concept of pagination.
 ---
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

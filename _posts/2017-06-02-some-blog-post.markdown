@@ -3,7 +3,7 @@ layout: post
 title:  "Some blog post"
 date:   2017-06-02 21:23:45 +0700
 categories: jekyll update
-thumb: thumb-2.jpg
+thumb: Thumb-2.jpg
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione tempor
 ---
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
