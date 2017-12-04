@@ -184,6 +184,7 @@ a.previous, a.next {
 
 #footer-logo {
   margin-top: ($main-padding * 2);
+  height: 40%;
   width: 40%;
 }
 
@@ -267,26 +268,37 @@ img#main-img {
 
   footer #footer-logo {
     margin-top: ($main-padding * 2);
-    width: 40%;
+    height: 30px;
+    width: 106px;
+  }
+
+  footer .medium-3 {
+    height: 30px;
+    width: 106px;
+  }
+
+  footer .column {
+    width: auto;
+  }
+
+  footer div .medium-9 {
+    width: auto;
   }
 
 }
 
-@media only screen and (min-width: 39em) {
+@media only screen and (min-width: 40em) {
   .trigger {
-    display: block;
-
-    a {
-      display: inline;
-    }
+    display: block !important;
   }
 
-  #footer-logo {
+  footer #footer-logo {
     margin-top: ($main-padding * 2);
-    width: 40%;
+    height: 30px;
+    width: 106px;
   }
-
 }
+
 
 
 pre.highlight, .highlighter-rouge pre.highlight {
