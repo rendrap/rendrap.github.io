@@ -1,6 +1,5 @@
 ---
 layout: post
-thumb: Thumb-4.jpg
 title: Validate multiple AMP HTML using amphtml-validator
 hidden : true
 description: Make your life easier while developing AMP site using amphtml-validator
