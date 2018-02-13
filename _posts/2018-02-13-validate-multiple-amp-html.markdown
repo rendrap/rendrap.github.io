@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Validate multiple AMP HTML using amphtml-validator
+thumb: Thumb-4.jpg
+title: Validate multiple AMP HTML
 hidden : true
-description: Make your life easier while developing AMP site using amphtml-validator
+description: Make your life easier while developing AMP site using amphtml-validator and ruby rakefile, the easy way.
 ---
 
 ## Validate AMP html in current folder and subfolder
