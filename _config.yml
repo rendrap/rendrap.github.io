@@ -17,7 +17,7 @@
 # File: _config.yml
 webrick:
   headers:
-    My-Header: Rendra.me
+    My-Header: Rendra.design
     My-Other-Header: Web-dev-blogs
 
 disqus:
@@ -26,13 +26,13 @@ disqus:
 google_analytics: UA-110544019-1
 
 title: Rendra Blog
-email: rendra@rendra.me
+email: rendrapradana@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This blog is my way of sharing my thought and view about Web Design and Development.
   If you're interested in Rails, CSS, build tools, and productivity hack, then read along.
   You might find some usefull tips and trick along the way.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://rendra.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rendra.design" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 paginate: 4
