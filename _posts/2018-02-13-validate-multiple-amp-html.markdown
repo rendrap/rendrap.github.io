@@ -58,3 +58,9 @@ index.html: PASS
 index2.html:2:0 The mandatory attribute '⚡' is missing in tag 'html ⚡ for top-level html'. (see https://www.ampproject.org/docs/reference/spec#required-markup)
 new/index3.html: PASS
 ```
+
+There are two main directory where the repo keeps it's images files : `/images` and '/uploads'.
+Here, we use gulp-imagemin to compress the images files, in various quality
+
+1. Loseless
+2. Lossy 80%, 50%, and 10% to exagerate the compression level, so that we can clearly see the difference.
