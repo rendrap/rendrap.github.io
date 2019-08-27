@@ -336,3 +336,30 @@ figure.highlight {
   margin: 0;
 }
 
+#fs-frm {
+  label, input
+  {
+    display: block;
+    padding-bottom: 0.6rem;
+    width: 100%;
+    padding: 5px;
+  }
+  textarea {
+    width: 100%;
+    padding: 5px;
+  }
+  label {
+    padding-left: 0;
+  }
+  input[type=submit] {
+    max-width: 20%;
+    min-width: 80px;
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  form fieldset {
+    width: 50%;
+  }
+}
