@@ -62,6 +62,8 @@ permalink: pretty
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+include:
+  - .well-known/
 
 exclude:
   - package.json
