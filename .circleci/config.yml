@@ -20,25 +20,14 @@ jobs:
       - run:
           name: copy static files and commit
           command: |
-            ls -la
             find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
-            ls -la
             mv _site/* .
-            ls -la
             rm -r _site/
-            ls -la
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
-            git status
             git add .
-            git status
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
-            git status
-            git log -1
-            git branch -a
             git push -f origin HEAD:develop
-            git branch -a
-            git log -1
 workflows:
   version: 2
   build_and_deploy:
