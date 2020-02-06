@@ -3,3 +3,4 @@
 *This blog is built with Jekyll*. It's ruby based static site generator.
 
 add1
+add2
