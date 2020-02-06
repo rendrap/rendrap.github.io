@@ -31,7 +31,9 @@ jobs:
             git status
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git status
+            git log -1
             git push -f origin HEAD:develop
+            git log -1
 workflows:
   version: 2
   build_and_deploy:
