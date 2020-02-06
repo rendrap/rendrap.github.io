@@ -12,7 +12,7 @@ jobs:
       - save_cache:
           key: v1-bundle-{{ checksum "Gemfile.lock" }}
           paths:
-            - ~/repo/vendor/bundle
+            - ~/project/vendor/bundle
       - run: bundle exec jekyll build
       - run:
           name: copy static files and commit
