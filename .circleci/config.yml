@@ -3,6 +3,7 @@ jobs:
   deploy:
     docker:
       - image: circleci/ruby:2.4-node-browsers-legacy
+    working_directory: ~/project
     steps:
       - restore_cache:
           keys:
