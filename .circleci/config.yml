@@ -3,7 +3,6 @@ jobs:
   deploy:
     docker:
       - image: circleci/ruby:2.4-node-browsers-legacy
-    working_directory: ~/project
     steps:
       - restore_cache:
           keys:
@@ -13,11 +12,7 @@ jobs:
       - save_cache:
           key: v1-bundle-{{ checksum "Gemfile.lock" }}
           paths:
-            - ~/project/vendor/bundle
-      - run:
-          name: Link Bundle Path
-          command : |
-            bundle --path vendor/bundle
+            - vendor/bundle
       - run: bundle exec jekyll build
       - run:
           name: copy static files and commit
