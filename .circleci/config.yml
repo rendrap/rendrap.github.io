@@ -14,6 +14,10 @@ jobs:
           key: v1-bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - ~/project/vendor/bundle
+      - run:
+          name: Link Bundle Path
+          command : |
+            bundle --path vendor/bundle
       - run: bundle exec jekyll build
       - run:
           name: copy static files and commit
