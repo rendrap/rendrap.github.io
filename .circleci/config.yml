@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.5
     steps:
+      - checkout
       - restore_cache:
           keys:
             - v1-bundle-{{ checksum "Gemfile.lock" }}
-      - checkout
       - run: bundle install --path vendor/bundle
       - save_cache:
           key: v1-bundle-{{ checksum "Gemfile.lock" }}
@@ -32,7 +32,9 @@ jobs:
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git status
             git log -1
+            git branch -a
             git push -f origin HEAD:develop
+            git branch -a
             git log -1
 workflows:
   version: 2
