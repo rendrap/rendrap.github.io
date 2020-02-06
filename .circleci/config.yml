@@ -1,13 +1,5 @@
 version: 2
 jobs:
-  test:
-    docker:
-      - image: circleci/ruby:2.4-node-browsers-legacy
-    steps:
-      - checkout
-      - run: |
-          bundle install
-          bundle exec jekyll build
   deploy:
     docker:
       - image: circleci/ruby:2.4-node-browsers-legacy
@@ -27,20 +19,17 @@ jobs:
             ls -la
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
+            git status
             git add .
+            git status
             git commit --allow-empty -m "$(git log develop -1 --pretty=%B)"
+            git status
             git push -f origin HEAD:develop
 workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - test:
-          filters:
-            branches:
-              ignore: no-develop
       - deploy:
-          requires:
-            - test
           filters:
             branches:
               only: master
