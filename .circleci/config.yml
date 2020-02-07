@@ -23,13 +23,13 @@ jobs:
           name: copy static files and commit
           command: |
             find . -maxdepth 1 ! -name '_site' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
-            mv _site/* .
+            mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
-            git push -f origin HEAD:develop
+            git push origin HEAD:develop
 workflows:
   version: 2
   build_and_deploy:
