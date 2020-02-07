@@ -10,15 +10,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-bundle-{{ checksum "Gemfile.lock" }}
+            - v1-bundle-{{ checksum "Gemfile" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-bundle-
+            - v1-bundle
       - run: bundle install --path vendor/bundle
       - save_cache:
-          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          key: v1-bundle-{{ checksum "Gemfile" }}
           paths:
             - vendor/bundle
-      - run: bundle exec jekyll build
+      - run: bundle exec jekyll build --config _config_develop.yml
       - run:
           name: copy static files and commit
           command: |
@@ -28,6 +28,7 @@ jobs:
             rm -r _site/
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
+            git pull
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git push origin HEAD:develop
