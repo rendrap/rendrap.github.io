@@ -31,6 +31,7 @@ jobs:
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git pull origin develop
+            git stash save --keep-index
             git push -f origin HEAD:develop
 workflows:
   version: 2
