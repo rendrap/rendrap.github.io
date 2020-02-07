@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Validate multiple AMP HTML</title>
+  <meta name="description" content="Validate AMP html in current folder and subfolder Tested on windows machine, This is just some quick way to validate multiple AMP html using amphtml-validator">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://rendra.design/2018/02/13/validate-multiple-amp-html/">
+  <link rel="alternate" type="application/rss+xml" title="Rendra Blog" href="/feed.xml">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet" type="text/css">
+
+  
+</head>
+
+
+  <body>
+
+    <header>
+
+  <div class="row">
+    <div class="medium-6 columns">
+      
+      
+      <a class="site-title" href="/"><img src="/assets/images/logo.png"></a>
+    </div>
+
+    <div class="medium-6 columns">
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <img src="/assets/images/menu.png">
+      </a>
+
+      <div class="trigger">
+           
+            
+           
+            
+            <a class="page-link" href="/about/">About</a>
+            
+           
+            
+            <a class="page-link" href="/contact/">Contact</a>
+            
+           
+            
+           
+            
+           
+            
+           
+            
+           
+            
+          
+      </div>
+
+    </nav>
+    </div>
+  </div>
+
+</header>
+
+
+        <div class="row">
+  <div class="medium-9 columns">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <h1 class="post-title" itemprop="name headline">Validate multiple AMP HTML</h1>
+        <p class="post-meta">
+          <time datetime="2018-02-13T00:00:00+00:00" itemprop="datePublished">
+            
+            Feb 13, 2018
+          </time>
+          
+        </p>
+
+        <div class="post-content" itemprop="articleBody">
+          <img src="/assets/images/Thumb-5.jpg" id="main-img"><h2 id="validate-amp-html-in-current-folder-and-subfolder">Validate AMP html in current folder and subfolder</h2>
+<p>Tested on windows machine,
+This is just some quick way to validate multiple AMP html using amphtml-validator</p>
+
+<p>Dependency:</p>
+<ul>
+  <li>
+    <p>amphtml-validator</p>
+
+    <p>run <code class="language-plaintext highlighter-rouge">npm install -g amphtml-validator</code> to install globally</p>
+  </li>
+  <li>
+    <p>ruby</p>
+  </li>
+</ul>
+
+<h2 id="folder-structure-example">Folder structure example</h2>
+<p>(for ilustration only)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>. (current folder)
+|   grid.css
+|   index.html
+|   index2.html
+|   rakefile
+|
++---new
+      index3.html
+</code></pre></div></div>
+
+<h2 id="rakefile">rakefile</h2>
+<p>create rakefile in the root of your project with following code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'colorize'</span>
+
+<span class="n">desc</span> <span class="s1">'Test website AMP validation'</span>
+<span class="n">task</span> <span class="ss">:amp</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'Running AMP Validator...'</span><span class="p">.</span><span class="nf">yellow</span><span class="p">.</span><span class="nf">bold</span>
+  <span class="c1"># basedir = '.'</span>
+  <span class="n">files</span> <span class="o">=</span> <span class="no">Dir</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s2">"**/*.html"</span><span class="p">)</span>
+    <span class="n">files</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+      <span class="nb">system</span><span class="p">(</span><span class="s2">"amphtml-validator </span><span class="si">#{</span><span class="n">file</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+<h2 id="run-rake">Run rake</h2>
+<p>on your terminal / command promt, run <code class="language-plaintext highlighter-rouge">rake amp</code></p>
+
+<h2 id="output">Output</h2>
+<p>Sample output, depend on your actual file.
+Here, my index2.html failed because my html tag was wrong.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Running AMP Validator...
+index.html: PASS
+index2.html:2:0 The mandatory attribute '⚡' is missing in tag 'html ⚡ for top-level html'. (see https://www.ampproject.org/docs/reference/spec#required-markup)
+new/index3.html: PASS
+</code></pre></div></div>
+
+<p>There are two main directory where the repo keeps it’s images files : <code class="language-plaintext highlighter-rouge">/images</code> and ‘/uploads’.
+Here, we use gulp-imagemin to compress the images files, in various quality</p>
+
+<ol>
+  <li>Loseless</li>
+  <li>Lossy 80%, 50%, and 10% to exagerate the compression level, so that we can clearly see the difference.</li>
+</ol>
+
+        </div>
+
+      
+        
+
+      
+    </article>
+  </div>
+  <div class="medium-3 columns ad">
+    <a href="#"><img src="/assets/images/Banner.jpg"></a>
+  </div>
+</div>
+
+    <footer>
+	<div class="row">
+		<div class="medium-3 columns">
+			<a href="  " class="site-title"><img src="/assets/images/logo.png" id="footer-logo"></a>
+		</div>
+		<div class="medium-9 columns">
+			<ul id="social-links">
+				<li><a href="#"><img src="/assets/images/fb.png" ></a></li>
+				<li><a href="#"><img src="/assets/images/tw.png" ></a></li>
+			</ul>
+		</div>
+
+	</div>
+</footer>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/what-input.js"></script>
+    <script src="/js/vendor/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    
+  </body>
+
+</html>

@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rendra.design
-Token: 74bf6bfd221dca9f04073d7976fbbe4bcfb9f058cb2439e96f7f564b1a512dc1
