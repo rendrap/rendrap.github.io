@@ -29,8 +29,8 @@ jobs:
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git add .
-            git pull origin develop
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
+            git pull origin develop
             git push -f origin HEAD:develop
 workflows:
   version: 2
