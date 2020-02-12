@@ -20,15 +20,20 @@ jobs:
             - vendor/bundle
       - run: bundle exec jekyll build --config _config_develop.yml
       - run:
-          name: copy static files and commit
+          name: make preview folder
           command: |
             ls -la
             find . -maxdepth 1 ! -name '_site'! -name 'vendor' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
+            echo after find . pertama
+            ls -la
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
             echo afer rm -r _site/
             ls -la
+      - run:
+          name: reset --hard HEAD^
+          command: |
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git stash save --keep-index
@@ -43,7 +48,7 @@ jobs:
             mv _site/* .
             rm -r _site/
             ls -la
-            git pop
+            git stash pop
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git push -f origin HEAD:develop
