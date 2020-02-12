@@ -48,6 +48,9 @@ jobs:
             mv _site/* .
             rm -r _site/
             ls -la
+      - run:
+          name: commit to develop branch
+          command: |
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git push -f origin HEAD:develop
