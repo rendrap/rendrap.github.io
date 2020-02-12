@@ -55,11 +55,11 @@ jobs:
             rm -r _site/
             ls -la
       - run:
-          name: commit to develop branch
+          name: commit to master branch
           command: |
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
-            git push -f origin HEAD:master
+            git push -f origin master
 workflows:
   version: 2
   build_and_deploy:
