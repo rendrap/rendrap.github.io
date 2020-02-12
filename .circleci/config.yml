@@ -13,7 +13,7 @@ jobs:
             - v1-bundle-{{ checksum "Gemfile" }}
             # fallback to using the latest cache if no exact match is found
             - v1-bundle
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: bundle install --path vendor/bundle
       - save_cache:
           key: v1-bundle-{{ checksum "Gemfile" }}
           paths:
@@ -22,10 +22,12 @@ jobs:
       - run:
           name: copy static files and commit
           command: |
-            find . -maxdepth 1 ! -name '_site' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
+            ls -la
+            find . -maxdepth 1 ! -name '_site'! -name 'vendor' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
+            ls- la
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git stash save --keep-index
