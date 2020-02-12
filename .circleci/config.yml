@@ -13,7 +13,7 @@ jobs:
             - v1-bundle-{{ checksum "Gemfile" }}
             # fallback to using the latest cache if no exact match is found
             - v1-bundle
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
       - save_cache:
           key: v1-bundle-{{ checksum "Gemfile" }}
           paths:
