@@ -58,8 +58,8 @@ jobs:
           name: commit to master branch
           command: |
             git add .
-            git commit -m "Updated: `date +'%Y-%m-%d %H:%M:%S'`"
-            git push -f origin master
+            git commit --allow-empty -m "$(git log develop -1 --pretty=%B)"
+            git push -f origin HEAD:master
 workflows:
   version: 2
   build_and_deploy:
