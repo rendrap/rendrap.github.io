@@ -32,7 +32,7 @@ jobs:
             echo rm -r _site/ executed!
             ls -la
       - run:
-          name: reset --hard HEAD^
+          name: reset --hard HEAD^ (to prev commit)
           command: |
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
@@ -40,9 +40,15 @@ jobs:
             git reset --hard HEAD^
             echo reset HEAD executed!
             ls -la
+      - run:
+          name: jekyll build from previous commit
+          command: |
             bundle install --path vendor/bundle
             bundle exec jekyll build
+            echo jeykll build executed!
             ls -la
+            echo list _site folder
+            ls -la _site
             echo jekyll build executed!
             find . -maxdepth 1 ! -name '_site' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
             mv _site/* .
