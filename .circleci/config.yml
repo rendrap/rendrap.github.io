@@ -26,6 +26,8 @@ jobs:
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
+            git config --global user.name "rendrap"
+            git config --global user.email "rendrapradana@gmail.com"
             git stash save --keep-index
             git reset --hard HEAD^
             ls -la
@@ -34,8 +36,6 @@ jobs:
             mv _site/* .
             ls-la
             git pop
-            git config --global user.name "rendrap"
-            git config --global user.email "rendrapradana@gmail.com"
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git push -f origin HEAD:develop
