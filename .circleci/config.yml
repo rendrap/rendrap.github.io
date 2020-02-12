@@ -26,7 +26,7 @@ jobs:
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
-            git clone HEAD^ .
+            git clone "$CIRCLE_REPOSITORY_URL" HEAD^ .
             ls -la
             bundle exec jekyll build
             ls -la
