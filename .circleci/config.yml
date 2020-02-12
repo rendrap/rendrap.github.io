@@ -59,7 +59,7 @@ jobs:
           command: |
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
-            git push -f origin HEAD:develop
+            git push -f origin HEAD:master
 workflows:
   version: 2
   build_and_deploy:
