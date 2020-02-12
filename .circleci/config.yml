@@ -47,9 +47,9 @@ jobs:
             bundle exec jekyll build
             echo jeykll build executed!
             ls -la
-            echo list _site folder
+            echo listing root folder
             ls -la _site
-            echo jekyll build executed!
+            echo list _site folder
             find . -maxdepth 1 ! -name '_site' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
             mv _site/* .
             rm -r _site/
