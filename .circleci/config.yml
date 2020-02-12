@@ -23,7 +23,7 @@ jobs:
           name: make preview folder
           command: |
             ls -la
-            find . -maxdepth 1 ! -name '_site'! -name 'vendor' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
+            find . -maxdepth 1 ! -name '_site' ! -name 'vendor' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
             echo after find . pertama
             ls -la
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
@@ -48,7 +48,6 @@ jobs:
             mv _site/* .
             rm -r _site/
             ls -la
-            git stash pop
             git add .
             git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
             git push -f origin HEAD:develop
