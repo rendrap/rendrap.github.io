@@ -26,6 +26,12 @@ jobs:
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
+            git clone HEAD^ .
+            ls -la
+            bundle exec jekyll build
+            ls -la
+            mv _site/* .
+            ls-la
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git add .
