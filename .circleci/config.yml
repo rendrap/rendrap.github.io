@@ -35,10 +35,13 @@ jobs:
             git reset --hard HEAD^
             echo afer reset HEAD
             ls -la
+            bundle install --path vendor/bundle
             bundle exec jekyll build
             ls -la
             echo afer jekyll build
+            find . -maxdepth 1 ! -name '_site' ! -name 'Gemfile*' ! -name '.git' ! -name '.circleci' -exec rm -rf {} \;
             mv _site/* .
+            rm -r _site/
             ls-la
             git pop
             git add .
