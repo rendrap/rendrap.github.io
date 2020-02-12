@@ -27,14 +27,17 @@ jobs:
             mkdir -p preview/${CIRCLE_PULL_REQUEST##*/}
             mv _site/* preview/${CIRCLE_PULL_REQUEST##*/}
             rm -r _site/
+            echo afer rm -r _site/
             ls -la
             git config --global user.name "rendrap"
             git config --global user.email "rendrapradana@gmail.com"
             git stash save --keep-index
             git reset --hard HEAD^
+            echo afer reset HEAD
             ls -la
             bundle exec jekyll build
             ls -la
+            echo afer jekyll build
             mv _site/* .
             ls-la
             git pop
