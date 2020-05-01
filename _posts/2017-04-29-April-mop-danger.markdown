@@ -11,5 +11,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio vero, volu
 
 <script src="https://gist.github.com/rendrap/35247c836c55b2ce125072ac69f85f68.js"></script>
 
+<<<<<<< HEAD
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio vero, voluptate consectetur quas, deleniti cupiditate optio ratione laborum porro.Repellat commodi ratione sapiente odit hic cumque alias! Sapiente dignissimos voluptates debitis, blanditiis quibusdam, dicta aliquid explicabo. Est sapiente, obcaecati.Eius expedita sint quaerat deserunt qui inventore accusamus tempora vitae eaque! Soluta sunt debitis, inventore, officia ullam libero magni perspiciatis.Dolores sit dolor explicabo exercitationem esse illum praesentium, soluta aut dolorem. Est velit sequi hic mollitia sit enim. Repellendus, cupiditate.
+=======
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio vero, voluptate consectetur quas, deleniti cupiditate optio ratione laborum porro.Repellat commodi ratione sapiente odit hic cumque alias! Sapiente dignissimos voluptates debitis, blanditiis quibusdam, dicta aliquid explicabo. Est sapiente, obcaecati.Eius expedita sint quaerat deserunt qui inventore accusamus tempora vitae eaque! Soluta sunt debitis, inventore, officia ullam libero magni perspiciatis.Dolores sit dolor explicabo exercitationem esse illum praesentium, soluta aut dolorem. Est velit sequi hic mollitia sit enim. Repellendus, cupiditate.
+>>>>>>> 65f98b157d72dd38817e6ad5cbb335057e65e9f2
