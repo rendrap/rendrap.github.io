@@ -365,3 +365,11 @@ figure.highlight {
 }
 
 html, body, .post-content { height: 100%; }
+
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    width: 100%;
+    height: 100%;
+}
