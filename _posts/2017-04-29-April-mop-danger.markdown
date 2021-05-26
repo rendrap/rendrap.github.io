@@ -14,4 +14,4 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio vero, volu
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio vero, voluptate consectetur quas, deleniti cupiditate optio ratione laborum porro.Repellat commodi ratione sapiente odit hic cumque alias! Sapiente dignissimos voluptates debitis, blanditiis quibusdam, dicta aliquid explicabo. Est sapiente, obcaecati.Eius expedita sint quaerat deserunt qui inventore accusamus tempora vitae eaque! Soluta sunt debitis, inventore, officia ullam libero magni perspiciatis.Dolores sit dolor explicabo exercitationem esse illum praesentium, soluta aut dolorem. Est velit sequi hic mollitia sit enim. Repellendus, cupiditate.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRTEEU4UIUpdcp3PiP0dVlslWcmvN3kFJq0ZVQXbBvABLg_xBiEV7FqaW4KIEmGlUsI3OL2wnpQ0GCd/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe width="100%"  height="auto" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRTEEU4UIUpdcp3PiP0dVlslWcmvN3kFJq0ZVQXbBvABLg_xBiEV7FqaW4KIEmGlUsI3OL2wnpQ0GCd/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
