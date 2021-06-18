@@ -32,7 +32,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   If you're interested in Rails, CSS, build tools, and productivity hack, then read along.
   You might find some usefull tips and trick along the way.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://rendra.design" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rendrap.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 paginate: 4
