@@ -17,7 +17,7 @@
 # File: _config.yml
 webrick:
   headers:
-    My-Header: Rendra.design
+    My-Header: Rendrap.com
     My-Other-Header: Web-dev-blogs
 
 disqus:
@@ -49,6 +49,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
 permalink: pretty
 
 # Exclude from processing.
