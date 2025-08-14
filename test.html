@@ -87,5 +87,18 @@
 <div class="calendly-inline-widget" data-url="https://calendly.com/rendrapradana/15min" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
+<script> 
+    const iframe = document.querySelector('iframe');
+
+iframe.addEventListener('load', () => {
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  const panel = iframeDoc.querySelector('div[data-container="side-panel"]');
+  if (panel) {
+    panel.style.background = 'red';
+  }
+});
+</script>
+
+    
   </body>
 </html>
